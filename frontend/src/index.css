@@ -1,0 +1,106 @@
+*,
+::before,
+::after{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html,
+body{
+  height: 100%;
+  width: 100%;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+label{
+  font-size: 20px;
+  padding-top: 5px;
+}
+
+.container{
+  background-color: rgb(255, 255, 255);
+  padding: 32px 48px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90,1);
+}
+
+.container > form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.container  div{
+  display: flex;
+  flex-direction: column;
+}
+
+.container input{
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+}
+
+.container input::placeholder{
+  font-size: 12px;
+  font-style: italic;
+}
+
+button{
+  background-color: paleturquoise;
+  border: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+button:hover {
+  background-color: #5099e8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+span {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  color: #666;
+  transition: color 0.3s ease-in-out;
+}
+
+span a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+span a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+@keyframes formFadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+form {
+  animation: formFadeIn 1s ease-in-out;
+}
